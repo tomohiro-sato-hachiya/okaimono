@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Input from '~/pages/input.vue'
+import Input from '~/components/input.vue'
 
 export default {
   components: {

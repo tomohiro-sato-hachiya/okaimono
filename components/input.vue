@@ -35,7 +35,7 @@ export default {
 		this.isHidden = false;
   	},
   	submit: function() {
-  		this.dynamicNumber = new Number(this.dynamicNumber);
+  		this.dynamicNumber = Number(this.dynamicNumber);
   		if (this.dynamicNumber <= 0) {
   			this.dynamicNumber = 1;
   		}
@@ -46,8 +46,8 @@ export default {
   		if (this.clearFlg) {
   			this.dynamicItemName = '';
   			this.previousItemName = '';
-  			this.dynamicNumber = 0;
-  			this.previousNumber = 0;
+  			this.dynamicNumber = 1;
+  			this.previousNumber = 1;
   		} else {
   			this.previousItemName = this.dynamicItemName;
   			this.previousNumber = this.dynamicNumber;

@@ -18,13 +18,12 @@
 </template>
 
 <script>
-import InputArea from '~/pages/inputArea.vue'
-import Item from '~/pages/item.vue'
+import InputArea from '~/components/inputArea.vue'
+import Item from '~/components/item.vue'
 import Vue from 'vue'
 import firebase from '~/plugins/firebase.js'
 
-const ItemConstructor = Vue.extend(Item)
-const axios = require('axios');
+const ItemConstructor = Vue.extend(Item);
 
 export default {
   components: {
@@ -63,6 +62,7 @@ export default {
           this.doneList.push(item);
       },
       change: function(item) {
+          console.log(item.dynamicNumber);
           firebase.database().ref('item/' + this.getKey(item)).set(this.getData(item));
       },
       removeItem: function(item) {

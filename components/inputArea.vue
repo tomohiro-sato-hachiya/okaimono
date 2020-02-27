@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import Item from '~/pages/item.vue'
+import Item from '~/components/item.vue'
 import Vue from 'vue'
-import Input from '~/pages/input.vue'
+import Input from '~/components/input.vue'
 
-const ItemConstructor = Vue.extend(Item)
+const ItemConstructor = Vue.extend(Item);
 
 export default {
   components: {
